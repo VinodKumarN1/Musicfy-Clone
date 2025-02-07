@@ -1,0 +1,296 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+body {
+    background: linear-gradient(135deg, #1e1e1e, #000000);
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    text-align: center;
+}
+
+
+nav{
+    font-family: 'Ubuntu', sans-serif;
+    margin-bottom: 0px;
+}
+
+nav ul{
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    height: 55px;
+    background-color: black;
+    color: white;
+}
+
+nav ul li{
+    padding: 0 12px;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 50px;
+    background: rgba(0, 0, 0, 0.7); /* Slight transparency */
+    backdrop-filter: blur(10px); /* Glassmorphism effect */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo i {
+    font-size: 28px;
+    color: #1db954;
+    animation: logoPop 0.8s infinite alternate;
+}
+
+@keyframes logoPop {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.1);
+    }
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: 0.3s;
+    padding: 8px 15px;
+    border-radius: 8px;
+}
+
+.nav-links a:hover {
+    background: rgba(255, 255, 255, 0.2);
+    color: #1db954;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.nav-link:hover {
+    color: #fcfcfc;
+}
+
+.brand img{
+    width: 44px;
+    padding: 0 8px;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    font-weight: bolder;
+    font-size: 1.3rem;
+    color: white; /* Default color */
+    transition: color 0.3s ease; /* Smooth transition */
+}
+
+.brand:hover {
+    color: #1db954; /* Spotify green color on hover */
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 15px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
+    max-width: 600px;
+    background-image: url('8324.png');
+    margin: auto;
+    margin-top: 20px;
+}
+
+.id{
+    color: white;
+    font-family: 'Varela Round', sans-serif;
+}
+
+.bottom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.icons {
+    margin-top: 14px;
+}
+
+.icons i {
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* Icons Hover Effect */
+.icons i:hover {
+    transform: scale(1.1);
+    color: #c7c2c2;
+}
+
+#myProgressBar{
+    width: 80vw; 
+    cursor: pointer;
+}
+
+.songItemContainer {
+    margin-top: 30px;
+}
+
+.songItem {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    margin: 10px 0;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.songItem:hover {
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0px 4px 12px rgba(255, 255, 255, 0.3);
+}
+
+input[type="range"] {
+    width: 80%;
+    cursor: pointer;
+    appearance: none;
+    background: #fefefe;
+    height: 5px;
+    border-radius: 5px;
+    outline: none;
+}
+
+.songItem img {
+    width: 43px;
+    margin: 0 23px;
+    border-radius: 50%;
+}
+
+.songItem.active {
+    background: rgba(0, 255, 0, 0.2);
+    border-left: 5px solid #1db954;
+    transition: 0.3s;
+}
+
+.timestamp i {
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.timestamp i:hover {
+    color: #1db954; 
+}
+
+.songInfo {
+    position: absolute;
+    left: 10vw;
+    font-family: 'Varela Round', sans-serif;
+}
+
+.songInfo img{
+    opacity: 0;
+    transition: opacity 0.4s ease-in;
+}
+
+footer {
+    margin-top: 20px;
+    font-size: 14px;
+    opacity: 0.7;
+}
+
+
+@media only screen and (max-width: 768px) {
+    .container {
+        width: 90%;
+        margin-top: 30px;
+    }
+    .songInfo {
+        left: 5vw;
+    }
+    .songItem {
+        flex-direction: column;
+        text-align: center;
+    }
+    .songItem img {
+        margin-bottom: 10px;
+    }
+    .bottom {
+        flex-direction: column;
+    }
+    #myProgressBar {
+        width: 90vw;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        height: auto;
+        padding: 10px;
+    }
+    nav ul li {
+        padding: 8px 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        padding: 10px 20px;
+    }
+    
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        background: rgba(0, 0, 0, 0.8);
+        backdrop-filter: blur(10px);
+        border-radius: 10px;
+        padding: 10px;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .hamburger {
+        display: block;
+        cursor: pointer;
+    }
+
+    .hamburger div {
+        width: 30px;
+        height: 3px;
+        background: white;
+        margin: 5px;
+        transition: 0.3s;
+    }
+}
